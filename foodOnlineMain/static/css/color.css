@@ -1,0 +1,141 @@
+.text-color, .listing .post-title:hover h5 a, .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus,
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, .pagination > .active > span > a,
+.order-sort-results ul li:hover a, .tabs-holder .nav li a:hover, .nav li  a:focus, .tabs-holder .nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus, 
+.sub-header .breadcrumbs ul li:hover a, .sub-header .breadcrumbs ul li:hover:before, .widget-popular-cities ul li a:hover, .widget-popular-cuisines ul li a:hover, .widget-menu ul li a:hover, .widget-connect ul li p a:hover,
+.news-letter .news-letter-form form .btn-holder input[type="submit"]:hover, .widget-recent-blog-post li:hover .post-title h6 a, .widget-categories ul li a:hover, .widget-categories ul li a:hover:before, .widget-cloud ul li a:hover,
+.panel-group .panel-heading a , .categories-menu li a:hover, .user-order .error-message, .delivery-timing > ul > li > a span, .delivery-timing ul li ul.delivery-dropdown li a:hover, .blog-detail .blockquote-hloder::before, .blog-detail .tags-list li a:hover,
+.blog-detail .swiper-button-prev:hover, .blog-detail .swiper-button-next:hover, .blog .post-title h3 a:hover, .blog .post-title h4 a:hover, .blog-large .author-info p a, .delivery-list .button a:hover, .user-nav-list ul li a:hover, .user-nav-list ul li a:hover i,
+.company-holder .swiper-button-next:hover i, .company-holder .swiper-button-prev:hover i, .user-holder .add-btn a, .user-holder .order-list .author-info .text-holder span.price, .user-holder .order-list .order-btn a, .main-header.transparent .main-location ul li ul li a:hover, 
+.main-header.transparent .main-location ul li ul li .has-child li a:hover, .order-sort-results ul li.active a, .listing-filter .expand, #footer .footer-widget .widget a:hover, .order-sort-results ul li.active a, ul.dashboard-nav li a:hover, .upload-file button[type='button'], .user-dashboard-menu > ul > li > ul li.user-add-restaurant > a, .widget_tag_cloud .tagcloud a:hover, .page-not-found .cs-text span.cs-error, .widget.widget_nav_menu ul li a:hover, .widget.widget-categories li a:hover, .widget.widget_categories li a:hover, .widget.widget_pages ul li a:hover, .widget.widget_archive li a:hover,
+.widget.widget_meta li a:hover, .widget.widget_nav_menu ul li a:hover:before, .widget.widget-categories li a:hover:before, .widget.widget-archives ul li a:hover,
+.widget.widget_categories li:hover:before, .widget.widget_pages ul li:hover:before, .widget.widget_archive li:hover:before,.site-maps-links ul li:hover a, .widget.widget-archives ul li:hover a:before, .widget.twitter-post li p a, .widget.widget_recent_comments li a:hover, .widget.widget_rss li .rsswidget:hover, .cs-construction .time-box h4, .listing .list-option .viewmenu-btn, .restaurant-menu-nav.nav-tabs > li.active a, .user-nav-list ul li.active a, .user-nav-list ul li.active i, .categories-order li li:after, .listing.fancy-simple .delivery-potions i, .listing.grid-listing .min-order, .listing.grid-listing .listing-footer .text-holder p.deliver-time span, .listing.grid-listing .listing-footer .text-holder p.pickup-time span, .transparent-header .main-header .login-option a.login-popup, .copy-right p a, .blog-medium .read-more i, .related-post .read-more, .user-suggest-list > .element-title > h5 + span em, .listing.grid-listing h4 a:hover, .listing.grid-listing .listing-footer a.ordernow-btn:hover, .transparent-header .main-header .login-option a.get-start-btn:hover, .categories-menu li.active a,
+.company-holder.fancy .rating-star .rating-box:before, .company-holder.fancy .fancy-button-prev:hover i, .company-holder.fancy .fancy-button-next:hover i, .company-rating .list-option .shortlist-btn i, .wp-foodbakery .listing.grid-slider:hover .restaurant-status, #footer.footer-style-4 .widget-connect ul li span i,
+.wp-foodbakery .listing.grid-slider .rating-star .rating-box:before, .location-holder.modern a.more-btn, .grid-slider .swiper-button-prev:hover i, .grid-slider .swiper-button-next:hover i,
+.company-holder.simple .company-logo .text-holder .post-title h6 a:hover
+{
+color:#c33332 !important;
+}
+.bgcolor, .chosen-container .chosen-results li.highlighted, .order-sort-results ul li:hover:before, .bootstrap-datetimepicker-widget .btn-primary, 
+.booking-info-sec .contact-info .field-holder .submit-btn input[type="submit"], .user-order input[type="submit"], .main-post .column-text form .field-holder .field-btn, 
+.main-search.fancy.bg-holder, .load-more-btn:hover, .order-sort-results ul li.active:before, .order-sort-results ul li.active:before, .listing.simple.slide-loader:before, .main-header .login-option a.get-start-btn, .field-holder .btn-submit:hover, .no-results .suggestions ul li:before, .widget.widget_search form .btn-default, .textwidget span.button-med a, .cs-seprater:after, .slicknav_btn, .user-order .select-option input[type="radio"]:checked + label:after, #add_payment_method #payment ul.payment_methods li.wc_payment_method input[type="radio"]:checked + label:after, .woocommerce-checkout #payment ul.payment_methods li.wc_payment_method input[type="radio"]:checked + label:after, .woocommerce form .woocommerce-checkout-payment .form-row input.button, .pricetable-holder .cs-price, .foodbakery-button-loader, .invite-member .btn-send, .menu-order-detail .btn-print, .radio-holder .input-radio label:after, .footer-style-1 .social-media li a:hover, #footer.footer-style-1 .widget-title h5:after, .pricetable-holder .foodbakery-subscribe-pkg-btn, .pricetable-holder .foodbakery-subscribe-pkg, .login-form .input-filed input[type="submit"], .login-form .input-filed input[type="button"], .user-dashboard .foodbakery_loader, .user-order input[type="submit"], .user-order .menu-order-confirm, .modal-dialog .menu-selection-container button, .modal-dialog .menu-selection-container .reset-menu-fields, .suggestion-search .btn-default, .main-search.classic .field-holder input[type="submit"],
+.wp-foodbakery .listing.grid-slider .list-post:hover:before, #footer.footer-style-4 .social-media > li > a:hover, #header.transparent-header.court.pinned .main-header,
+.main-location > ul > li.choose-location ul ul::-webkit-scrollbar-thumb, .icon-boxes.fancy:hover .img-holder figure i
+{
+background-color:#c33332 !important;
+}
+.max-location-height::-webkit-scrollbar-thumb, .slicknav_nav::-webkit-scrollbar-thumb
+{
+background-color:#c33332 !important;
+}        
+.br-color, .listing .list-option .viewmenu-btn, .widget-text .content-btn, .load-more-btn, .blog-detail .blockquote-hloder, .blog-large .read-more, .delivery-list .button a:hover, .upload-file button[type='button'], .widget_tag_cloud .tagcloud a:hover, .icon-boxes.modern figure:before, .icon-boxes.modern figure, .listing.grid-listing .listing-footer a.ordernow-btn:hover, .transparent-header .main-header .login-option a.get-start-btn:hover, #footer.footer-style-4 .social-media > li > a:hover, .location-holder.modern a.more-btn
+{
+border-color:#c33332 !important;
+}
+.restaurant-menu-nav.nav-tabs > li a:hover, .restaurant-menu-nav.nav-tabs > li a:focus, .restaurant-menu-nav.nav-tabs > li.active a
+{
+border-top-color:#c33332 !important;
+}   
+body{
+background:#ebedf3 !important;	    }
+.cs-main-nav {
+position: relative !important;
+}
+body,
+.main-section p,
+.mce-content-body p
+{
+font:Normal  14px/24px "Open Sans", sans-serif;letter-spacing: 0px;text-transform: none;color: #515151 !important;	    }
+header .logo {
+margin-top:0px;
+margin-right:0px;
+margin-bottom:0px;
+margin-left:0px;
+}
+#header .navigation > ul > li > a,
+#header .navigation > ul > li
+{
+font:800 Normal  13px/19px "Open Sans", sans-serif !important;text-transform: uppercase !important;	    }
+h1, h1 a{
+font:700 Normal  30px/36px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;}
+h2, h2 a{
+font:700 Normal  24px/30px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+h3, h3 a{ 
+font:700 Normal  20px/26px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+h4, h4 a{
+font:700 Normal  18px/24px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+h5, h5 a{
+font:700 Normal  16px/22px "Montserrat", sans-serif !important;letter-spacing: 0px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+h6, h6 a{
+font:700 Normal  14px/20px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+.cs-section-title h2{
+font:700 Normal  18px/26px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+.post-title h3 a{
+font:700 Normal  20px/26px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: uppercase !important;color: #000000 !important;	    }
+.cs-page-title h1 {
+font:700 Normal  30px/36px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+.page-sidebar .widget .widget-title h5{
+font:700 Normal  16px/20px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #000000 !important;	    }
+#footer .widget-title h5{
+font:700 Normal  16px/20px "Montserrat", sans-serif !important;letter-spacing: 1px !important;text-transform: capitalize !important;color: #adb0b6 !important;	    }
+#header .main-header
+{
+background-color:#ffffff !important;
+}
+#header .main-navigation ul ul li a,
+#header .main-navigation ul ul ul li a
+{color:#000000 !important;}
+#header .main-navigation ul ul li:hover > a,
+#header .main-navigation ul li.current-menu-parent ul li.current-menu-item:hover > a,
+#header .main-navigation ul li.current-menu-ancestor ul li.current-menu-item > a,
+#header .main-navigation ul li.current-menu-ancestor ul li.current-menu-item > a:after,
+#header .main-navigation ul li.current-menu-ancestor ul li.current-menu-ancestor > a,
+#header .main-navigation ul li.current-menu-ancestor ul li.current-menu-ancestor > a:after {
+color:#999999 !important;}
+#header .main-navigation ul li > a,
+#header .main-navigation ul li.menu-item-has-children > a:after,
+.transparent-header .user-dashboard-menu > ul > li > a,
+.transparent-header .user-dashboard-menu > ul > li.user-dashboard-menu-children > a:after
+{ color:#999999 !important;}
+#header .main-navigation ul li:hover > a,
+#header .main-navigation ul li.menu-item-has-children:hover > a:after,
+#header .main-navigation ul li.current-menu-ancestor > a,
+#header .main-navigation ul li.current-menu-ancestor > a:after,
+#header .main-navigation ul li.current-menu-item > a,
+#header .main-navigation ul li.current-menu-item > a:after
+{ color:#c33332 !important; }
+#header .main-navigation ul ul ul,
+#header .main-navigation ul li.current-menu-ancestor ul li.current-menu-item > a,
+#header .main-navigation ul li.current-menu-ancestor ul li.current-menu-ancestor > a,
+#header .main-navigation ul ul,
+#header .main-navigation ul ul ul li:hover > a
+{ background:#ffffff !important; }
+.page-sidebar .widget-title h3, .page-sidebar .widget-title h4, .page-sidebar .widget-title h5, .page-sidebar .widget-title h6{
+color:#2d2d2d !important;
+}	    .section-sidebar .widget-title h3, .section-sidebar .widget-title h4, .section-sidebar .widget-title h5, .section-sidebar .widget-title h6{
+color:#2d2d2d !important;
+}
+#footer .footer-widget { background-color:#282C35 !important; }
+#footer .footer-widget p, .custom-container
+{color:#cdcdcd !important;}
+#footer.modern-v1 .cs-copyright p a,
+#footer.modern-v1 .cs-copyright .btn-top a,
+#footer .cs-copyright a,
+#footer .copy-right p,
+#footer .cs-copyright p a,
+#footer .cs-copyright .btn-top a
+{
+color:#cdcdcd !important;
+}
+#footer .footer-widget a,
+#footer .cs-footer-widgets a i,
+#footer .footer-widget .widget ul li span,
+#footer .footer-widget .widget ul li i,
+#footer .widget.widget-related-post .related-post-holder.classic .text-holder span,
+#footer .textwidget
+{
+color:#cdcdcd !important;
+}	    /*Footer Copyright Background Color*/
+#footer .copy-right,
+#footer.modern-v1 .cs-copyright {background-color:#282c35 !important;}
+#footer .copyright-sec,
+#footer.modern-v1 .cs-copyright {background-color:#282c35 !important;}

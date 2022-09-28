@@ -1,0 +1,424 @@
+.rtl{direction: rtl;}
+.rtl [class*="col-lg"], 
+.rtl [class*="col-md"], 
+.rtl [class*="col-sm"], 
+.rtl [class*="col-xs"] { display: inline-block; vertical-align: top; margin: 0 0 0 -4px; float: none; }
+.rtl .main-header .logo { margin-right: 0; margin-left: 30px; }
+.rtl .main-location > ul > li { margin: 0 0 0 18px; }
+.rtl .main-header .login-option { float: left; text-align: left; }
+.rtl .transparent-header .main-header .login-option a.get-start-btn { margin: 0 25px 0 0; }
+.rtl .main-header .login-option a.login-popup { margin-right: 15px; margin-left: 0; }
+.rtl .transparent-header .main-header .main-nav { float: left; padding: 6px 0 0 20px; }
+.rtl .main-search.fancy .field-holder .select-location span.foodbakery-input-cross { left: 35px; right: auto; }
+.rtl .main-search .field-holder span.foodbakery-radius-location { left: 15px; right: auto; }
+.rtl .main-search .field-holder span.foodbakery-search-location-icon { right: 10px; left: auto; }
+.rtl .main-search.fancy .field-holder .select-location input[type="text"] { padding-right: 35px; padding-left: 15px; }
+.rtl .main-location > ul > li > ul li > a { text-align: right; }
+.rtl .main-location > ul > li > ul li > a img { margin-left: 15px; margin-right: auto; }
+.rtl .main-location > ul > li > a > i { margin-left: 12px; margin-right: auto; }
+.rtl .main-location > ul > li ul { left: auto; right: -20px; }
+.rtl .main-location .close-menu-location { left: 14px; right: auto; }
+.rtl .main-location > ul > li > a { padding-left: 21px; padding-right: 0; }
+.rtl .main-location > ul > li.choose-location ul ul { right: -1px; left: auto; }
+.rtl .main-location .choose-location .foodbakery-radius-location { left: 15px; right: auto; }
+.rtl .main-location > ul > li > ul li input[type=text] { padding-left: 47px; padding-right: 15px; }
+.rtl .main-location > ul > li.location-has-children > a:after { left: 0; right: auto; }
+.rtl .main-location > ul > li > ul li.popular-location { text-align: right; }
+.rtl .main-header .main-navigation > ul > li ul li a { text-align: right; }
+.rtl .transparent-header .main-header .main-navigation > ul > li.menu-item-has-children > a:before { left: 5px; right: auto; }
+.rtl .counter-holder .text-holder i { margin-left: 15px; margin-right: 0; }
+.rtl .counter-holder .text-holder strong { margin-left: 10px; margin-right: 0; }
+.rtl .cs-icon-boxes-list .icon-boxes.modern:after { right: 50%; left: auto; }
+.rtl .listing.grid-listing .listing-footer .text-holder { padding: 6px 10px 0 100px; }
+.rtl .listing.grid-listing .listing-footer a.ordernow-btn { left: 0; right: auto; }
+.rtl .main-search.modern .field-holder i.icon-search { left: 15px; right: auto; }
+.rtl .listing.grid-listing .listing-footer .text-holder p.deliver-time span, 
+.rtl .listing.grid-listing .listing-footer .text-holder p.pickup-time span { margin-left: 5px; margin-right: 0; }
+.rtl .main-header .main-navigation > ul > li ul { right: 0; left: auto; }
+.rtl .icon-boxes.modern figure:before { left: 4px; right: auto; }
+.rtl .icon-boxes.modern figure:before { -webkit-transform: rotate(135deg); -moz-transform: rotate(135deg); transform: rotate(135deg); }
+.rtl .city-autocomplete .address_headers { text-align: right; }
+.rtl .city-autocomplete .cs_google_suggestions { padding-right: 34px; padding-left: 18px; text-align: right; }
+.rtl .city-autocomplete .cs_google_suggestions i { right: 15px !important; left: auto; }
+.rtl .listing.grid-listing .list-option { float: right; }
+.rtl .listing.grid-listing .list-option .time-label { margin-left: 10px; margin-right: 0; }
+.rtl .listing.grid-listing .list-option .shortlist-btn { margin-left: 6px; margin-right: 0; }
+.rtl .listing.fancy .list-option .shortlist-btn { margin-left: 6px; margin-right: 0; }
+.rtl .cs-calltoaction .cs-text { margin-left: 20px; margin-right: 0; }
+.rtl .cs-calltoaction.simple a { left: 0; right: auto; }
+.rtl .listing.fancy .text-holder { padding-right: 26px; padding-left: 0; }
+.rtl .listing.fancy .list-option { left: 3px; right: auto; }
+.rtl .listing.fancy-simple .delivery-potions i { margin-left: 5px; margin-right: 0; }
+.rtl .main-post .img-frame { margin-left: 55px; margin-right: auto; }
+.rtl .main-post .column-text .app-btn { padding-left: 10px; padding-right: 0; }
+.rtl .main-post .column-text form .field-holder .field-input { padding-left: 120px; padding-right: 15px; }
+.rtl .main-post .column-text form .field-holder .field-label-btn { left: 1px; right: auto; }
+.rtl .main-post .img-frame { text-align: left; }
+.rtl #footer .widget.widget_nav_menu ul li a, 
+.rtl #footer .widget.widget-categories li a { padding-right: 20px; padding-left: 0; }
+.rtl .widget.widget_nav_menu ul li a:before, 
+.rtl .widget.widget-categories li a:before { right: 0; left: auto; }
+.rtl #footer .widget-categories ul li a:before { -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%) rotate(-180deg); -ms-transform: translateY(-50%) rotate(-180deg); transform: translateY(-50%) rotate(-180deg); }
+.rtl .widget-connect ul li span { right: 0; }
+.rtl .widget-connect ul li { padding-right: 53px; padding-left: 0; }
+.rtl  .widget-top-cities ul li a:hover { margin-right: 10px; margin-left: 0; }
+.rtl .footer-style-1 .social-media li { margin: 0 0 10px 5px; padding-right: 0; }
+.rtl .footer-style-1 .social-media li:last-child { margin-left: 0; }
+.rtl .footer-style-1 .right-logos { float: left; }
+.rtl .login-form .input-filed input[type="text"], 
+.rtl  .login-form .input-filed input[type="email"], 
+.rtl  .login-form .input-filed input[type="password"] { padding: 0 35px 0 0; }
+.rtl .login-form .input-filed i, .rtl .login-form .input-filed span { right: 12px; left: auto; }
+.rtl .login-form .cs-demo-login .cs-demo-login-lable { float: right; }
+.rtl .login-form .login-switches li { float: right; }
+.rtl .login-form .cs-demo-login a i { display: inline-block; margin-left: 5px; margin-right: 0; }
+.rtl .login-form .g-recaptcha { margin-right: 30px; }
+.rtl .user-dashboard-menu > ul > li > a { padding: 26px 45px 26px 21px; }
+.rtl .user-dashboard-menu > ul > li ul { left: 0; right: auto; }
+.rtl .user-dashboard-menu li figure { float: right; margin-left: 10px; margin-right: 0; right: 0; left: auto; }
+.rtl .user-dashboard-menu > ul > li.user-dashboard-menu-children > a:after { left: 0; right: auto; }
+.rtl  .user-nav-list ul li a i { margin-left: 10px; margin-right: 0; }
+.rtl .login-option .user-dashboard-menu > ul > li > ul li > a { text-align: right; }
+.rtl .user-dashboard-menu > ul > li > ul li > a > i { margin-left: 15px; margin-right: 0; }
+.rtl .company-info-detail .company-info .img-holder { float: right; }
+.rtl .company-info-detail .company-info .text-holder { padding-right: 18px; padding-left: 0; }
+.rtl .company-info-detail .company-info .text-holder .text i { right: 0; }
+.rtl .company-info-detail .company-info .text-holder .text { padding-left: 0; padding-right: 20px; }
+.rtl .company-info-detail .company-info .text-holder span.reviews { margin-right: 3px; margin-left: 0; line-height: 18px; }
+.rtl .close { float: left; }
+.rtl .progressbar-nav li:after { right: -50%; }
+.rtl .restaurant-info .img-holder { float: right; margin-left: 25px; margin-right: 0; }
+.rtl .chosen-container-single .chosen-single span { margin-left: 26px; margin-right: 0; }
+.rtl .field-holder .chosen-container-single .chosen-single:before { left: 15px; right: auto; }
+.rtl .chosen-container-multi .chosen-choices li { float: right; margin-left: 5px; margin-right: 0; }
+.rtl .chosen-container-multi .chosen-choices li:last-child { margin-right: 0; }
+.rtl .user-dashboard .element-title h5, 
+.rtl .user-dashboard .element-title h4 { float: right; }
+.rtl .user-holder ul.tagit li { float: right; }
+.rtl .user-holder ul.tagit:before { left: 0; right: auto; }
+.rtl .chosen-container-multi .chosen-choices li.search-choice { padding: 3px 5px 3px 20px; }
+.rtl .chosen-container-multi .chosen-choices li.search-choice .search-choice-close { left: 3px; right: auto; }
+.rtl .user-holder ul.tagit li.tagit-choice { padding: 3px 10px 3px 20px; }
+.rtl .user-holder ul.tagit li.tagit-choice .tagit-close { left: 8px; right: auto; }
+.rtl .time-list .open-close-time a, 
+.rtl  .book-list .open-close-time a { float: left; }
+.rtl .field-holder { margin-left: -4px; margin-right: 0; }
+.rtl .time-list .day-sec, 
+.rtl .book-list .date-sec { margin: 0 0 0 -4px; }
+.rtl .add-menu-item { float: left; }
+.rtl .service-list .list-option { float: left; text-align: left; }
+.rtl .service-list .list-option a.remove-menu-item { display: inline-block; margin-right: 10px; margin-left: 0; }
+.rtl .service-list .drag-option { margin-left: -4px; margin-right: 0; }
+.rtl #menu-cats-items .close-menu-item, .rtl .service-list .close-menu-item, .rtl .tab-content .close-menu-item { float: left; }
+.rtl .service-list .panel-group .panel .element-title.panel-heading a:after { left: 15px; right: auto; }
+.rtl .service-list .panel-group .panel .element-title.panel-heading .drag-option { right: 10px; }
+.rtl .service-list .panel-group .panel .element-title.panel-heading a { padding: 10px 40px 10px 10px; }
+.rtl .service-list .menu-items-list .icon-img-holder .remove-icon { left: -5px; right: auto; }
+.rtl .nutri-info-icons li { margin-left: 10px; margin-right: 0; }
+.rtl .nutri-info-icons li:last-child { margin-left: 0; }
+.rtl .pull-left { float: right !important; }
+.rtl .pull-right { float: left !important; }
+.rtl .sort-by { float: left; }
+.rtl .right-filters .input-field i.icon-angle-down:before { left: 10px; right: auto; }
+.rtl .sort-by > ul > li > span { padding-left: 25px; padding-right: 10px; }
+.rtl .sort-by > ul > li > span:before { left: 10px; right: auto; }
+.rtl .review-listing .review-title { text-align: right; }
+.rtl .review-listing li .review-text h6 { margin-right: 0; margin-left: 10px; }
+.rtl .review-listing .review-date { text-align: right; }
+.rtl .review-listing li .review-text p { text-align: right; }
+.rtl .review-reply-btn { float: left; }
+.rtl .add-new-review-holder .elements-title .close-post-new-reviews-btn { left: 0; right: auto; }
+.rtl .buy-new-pakg-actions { left: 15px; right: auto; }
+.rtl .restaurant-info-sec ul li span { float: left; }
+.rtl .restaurant-info-sec ul li { text-align: right; }
+.rtl .right-filters > div:last-child { float: left; }
+.rtl .text-right { text-align: left; }
+.rtl .text-left { text-align: right; }
+.rtl .user-dashboard .earning-calculation li { text-align: right; }
+.rtl .user-dashboard .earning-calculation li strong { float: left; }
+.rtl .right-filters.row { margin-left: 0; margin-right: auto; }
+.rtl .daterangepicker.ltr .calendar.left { margin-right: 4px; margin-left: 0; }
+.rtl div.daterangepicker .btn-default { float: left; }
+.rtl div.daterangepicker .range_inputs { text-align: right; }
+.rtl .daterangepicker .input-mini { padding-left: 6px; padding-right: 28px; text-align: right; }
+.rtl .daterangepicker .daterangepicker_input i { right: 8px; left: auto; }
+.rtl .daterangepicker.ltr .left .daterangepicker_input { margin-right: 12px; padding-right: 0; }
+.rtl ul.sub-nav { text-align: left; }
+.rtl ul.sub-nav li { padding-right: 20px; padding-left: 0; }
+.rtl .user-profile .team-list ul.panel-group li .panel .close-member { left: 0; right: auto; }
+.rtl .invite-member a.close-btn.cancel { float: left; }
+.rtl .user-holder ul.checkbox-list label:before { margin-left: 10px; margin-right: 0; right: 0; left: auto; }
+.rtl .user-holder ul.checkbox-list label { padding-right: 22px; padding-left: 0; }
+.rtl .invite-member .btn-send { margin-right: 0; margin-left: 6px; }
+.rtl .login-form .modal-header h5 { float: right; }
+.rtl .user-dashboard .listing.simple .list-option { left: 0; right: auto; }
+.rtl .user-dashboard .modal-dialog .login-form .input-filed input[type="text"][type="text"] { padding-right: 15px; }
+.rtl .company-info-detail .company-info .text-holder ul.user-info-contact li { padding-left: 0; padding-right: 20px; }
+.rtl .company-info-detail .company-info .text-holder ul.user-info-contact li i { right: 0; left: auto; }
+.rtl .user-dashboard .order-list .author-info .text-holder { padding-right: 15px; padding-left: 0; float: right; text-align: right; }
+.rtl .user-dashboard .order-list .author-info .text-holder h6 { text-align: right; padding-left: 55px; padding-right: 0; }
+.rtl .user-dashboard .order-list .author-info .text-holder span.price { left: 0; right: auto; }
+.rtl .user-dashboard .order-list .author-info .img-holder { float: right; }
+.rtl .user-dashboard .order-list .order-btn span.order-status { float: left; }
+.rtl .user-dashboard .listing.simple .list-option .delete-shortlist { margin-right: 10px; margin-left: 0; }
+.rtl .modal-dialog .order-detail-options li strong { float: right; margin-right: 0; margin-left: 10px; }
+.rtl .modal-dialog .order-detail-options li strong + span { float: right; }
+.rtl .modal-dialog .modal-header h2, 
+.rtl .modal-dialog .modal-header h2 a, 
+.rtl .modal-dialog h2 { float: right; }
+.rtl .modal-dialog .order-detail-options.order-total li span { float: left; }
+.rtl .woocommerce form .form-row.form-row-first { margin-right: 0; margin-left: 30px; }
+.rtl .woocommerce form .form-row input.button { margin-left: 10px; margin-right: 0; }
+.rtl .woocommerce-checkout .cs-rich-editor .woocommerce .woocommerce-checkout h3 { text-align: right; }
+.rtl .woocommerce table.woocommerce-checkout-review-order-table thead tr th:first-child, 
+.rtl .woocommerce table.woocommerce-checkout-review-order-table tbody tr th:first-child, 
+.rtl .woocommerce table.woocommerce-checkout-review-order-table tbody tr td:first-child, 
+.rtl .woocommerce table.woocommerce-checkout-review-order-table tfoot tr th:first-child, 
+.rtl .woocommerce table.woocommerce-checkout-review-order-table tfoot tr td:first-child { text-align: right; }
+.rtl #add_payment_method #payment ul.payment_methods li label, 
+.rtl .woocommerce-checkout #payment ul.payment_methods li label { padding-right: 30px; padding-left: 0; }
+.rtl #add_payment_method #payment ul.payment_methods li label:before, 
+.rtl .woocommerce-checkout #payment ul.payment_methods li label:before { right: 0; left: auto; }
+.rtl #add_payment_method #payment ul.payment_methods li.wc_payment_method input[type="radio"]:checked + label:after, 
+.rtl .woocommerce-checkout #payment ul.payment_methods li.wc_payment_method input[type="radio"]:checked + label:after { right: 5px; left: auto; }
+.rtl .woocommerce-checkout .cs-rich-editor .woocommerce .woocommerce-checkout #payment div.payment_box p:after { right: 10px; left: auto; }
+.rtl .woocommerce .woocommerce-info { padding: 12px 48px 12px 15px !important; }
+.rtl .woocommerce .woocommerce-error:before, .rtl .woocommerce .woocommerce-info:before, 
+.rtl .woocommerce .woocommerce-message:before { right: 15px; left: auto; }
+.rtl .menu-order-detail .btn-print i { margin-left: 6px; margin-right: 0; }
+.rtl .modal-dialog .customer-detail-holder ul li strong + span { float: right; padding-right: 10px; padding-left: 0; }
+.rtl .modal-dialog .customer-detail-holder ul li strong { float: right; }
+.rtl .description-holder .order-detail-holder ul li, 
+.rtl .description-holder .customer-detail-holder ul li { margin-left: 0; margin-right: -4px; }
+.rtl .chosen-container-single .chosen-single:before { left: 15px; right: auto; }
+.rtl .mCSB_container{overflow: visible;}
+.rtl .modal-dialog .order-status-holder .input-field .status-loader{left: 28px; right: auto;}
+.rtl .user-holder .restaurant-info .img-holder .foodbakery-gallery-holder .close-btn{float:left;}
+.rtl .restaurant-info .img-holder .item-assts{left:4px; right:auto;}
+.rtl .user-dashboard .foodbakery_loader{right:0; left:auto;}
+.rtl .reviews-holder .total-rating{text-align: right;}
+.rtl .add-new-review-holder input[type="text"], 
+.add-new-review-holder textarea{padding-left: 15px; padding-right: 38px;}
+.rtl .add-new-review-holder .form-element i{left:auto; right:15px;}
+.rtl .user-reviews-list .close{left:0; right:auto;}
+.rtl .element-title span.element-slogan{margin-right: 5px; margin-left: 0;}
+.rtl .reviews-sortby li .reviews-sort-dropdown{left:0; right: auto;}
+.rtl .user-dashboard .order-list .rating-holder span{margin-right: 7px; margin-left: 0;}
+/*Other Pages RTL*/
+/*Blogs Style*/
+.rtl .blog-large .social-media, 
+.rtl .widget.widget_search form .input-group-btn {left: 0; right: auto;}
+.rtl .blog .social-media li a {margin: 0 8px 0 -4px;}
+.rtl .page-sidebar .widget-title:before, .rtl .section-sidebar .widget-title:before,
+.rtl .widget.widget_categories li:before, .rtl .widget.widget_pages ul li:before, .rtl .blog-detail blockquote:before {right: 0; left: auto;}
+.rtl .widget.widget_search form .btn-default {border-radius: 3px 0 0 3px;}
+.rtl .widget.widget_search form input.form-control {padding: 0 16px 0 0;}
+.rtl .widget-recent-blog-post .img-holder {margin-right: 0; margin-left: 11px;}
+.rtl .widget-recent-blog-post .post-options span:first-child {margin-right: 0;}
+.rtl .widget-recent-blog-post .post-options span i {margin-left: 5px; margin-right:0;}
+.rtl .widget.widget_categories li, .rtl .widget.widget_pages ul li {padding: 0 20px 8px 0;}
+.rtl .widget-gallery li {margin-left: -4px; margin-right:0;}
+.rtl .widget_tag_cloud .tagcloud a {margin: 0 0 4px 2px;}
+.rtl .blog-medium .img-holder {float: left; margin: 0 50px 0 0;}
+.rtl .blog-medium .read-more i {margin: 0 5px 0 0; transform: scale(-1); display: inline-block;}
+.rtl .blog-masonry .post-options {text-align: right;}
+.rtl .blog-masonry .post-options li i {display: inline-block; margin: 0 0 0 8px;}
+.rtl .blog-masonry .post-options li span {margin: 0 20px 0 0;}
+.rtl .blog-masonry .post-options li span:before {right: -10px; left: auto;}
+.rtl .blog-masonry .read-more:before {left: 0; right: auto; transform: scale(-1);}
+.rtl .widget.widget_categories ul li a {display: inline-block;}
+.rtl .blog-medium .post-options li>a {margin-left: 20px; margin-right:0;}
+.rtl .blog-medium .post-options li span:before {right: -10px; left: auto;}
+.rtl .blog-detail .author-info figure {float: right; margin: 0 0 0 10px;}
+.rtl .blog-detail .post-options li {margin: 0 20px 0 0;}
+.rtl .blog-detail .post-options li:before {right: -10px; left: auto;}
+.rtl .blog-detail .post-options li i {display: inline-block; margin: 0 0 0 5px;}
+.rtl .blog-detail .social-media {margin: 0 -5px 25px 0;}
+.rtl .blog-detail .social-media li a {margin: 0 8px 0 -4px;}
+.rtl .blog-detail blockquote:after {right: 5px; left: auto;}
+.rtl .blog-detail .swiper-button-prev, .rtl .blog-detail .swiper-button-next {left: 50px; right: auto; transform: scale(-1);}
+.rtl .blog-detail .swiper-button-next {left: 15px; right: auto;}
+.rtl .blog-detail .related-post .post-options li:first-child {margin-right: 0;}
+.rtl .related-post .read-more i {display: inline-block; margin: 0 8px 0 0;}
+/*Listings Style*/
+.rtl .categories-menu h6 i {float: right; margin: 0 0 0 8px;}
+.rtl .tabs-holder .nav.nav-tabs li:after, .rtl .menu-itam-holder .menu-itam-list .price-holder {left: 0; right: auto;}
+.rtl .tabs-holder .nav-tabs li a i {margin-left: 8px; margin-right: 0; display: inline-block;}
+.rtl .tabs-holder .nav-tabs li.active:first-child a, 
+.rtl .nav-tabs li.active:first-child a:hover, 
+.rtl .nav-tabs li.active:first-child a:focus {border-top-right-radius: 5px; border-top-left-radius:0;}
+.rtl .menu-itam-holder .field-holder:after {left: 2px; right: auto;}
+.rtl .menu-itam-holder .menu-itam-list .image-holder + .text-holder {padding-right: 10px;}
+.rtl .tabs-holder {text-align: right;}
+.rtl .menu-itam-holder .menu-itam-list .price-holder a i {margin: 0 28px 0 0;}
+.rtl .menu-itam-holder .menu-itam-list .nutri-icons li {margin-left: 5px; margin-right:0;}
+.rtl .user-order h6 i {float: right; margin: 3px 0 0 8px;}
+.rtl .user-order .select-option li {margin-left: 15px; margin-right:0;}
+.rtl .user-order .select-option label:before {right: 0; left: auto;}
+.rtl .user-order .select-option label {padding: 0 20px 0 0;}
+.rtl .user-order .select-option input[type="radio"]:checked + label:after {right: 3px; left: auto;}
+.rtl .user-order .select-option span {padding: 5px 20px 0 0;}
+.rtl .field-holder {margin-left: -4px; margin-right:0;}
+.rtl .company-info-detail .delivery-timing .text i {right: 0; left: auto;}
+.rtl .company-info-detail .delivery-timing .text {padding: 0 45px 0 32px;}
+.rtl .categories-order a.btn-cross {float: left; margin: 5px 8px 0 0;}
+.rtl .categories-order .category-price, .rtl .user-order .price-area li .price, 
+.rtl .user-order .total-price .price, .rtl .delivery-timing ul li a i {float: left;}
+.rtl .delivery-timing ul li ul.delivery-dropdown li > a span {float: right; margin: 0;}
+.rtl .delivery-timing ul li ul.delivery-dropdown li > a .opend-time {direction: ltr; padding-right: 13px; padding-left:0;} 
+.rtl .extras-detail-options .extras-detail-att label:before, .rtl .calendar-options li:before {right: 0; left: auto;}
+.rtl .extras-detail-options .extras-detail-att label {padding-right: 25px; padding-left:0;}
+.rtl .booking-info-sec .booking-info .field-holder.has-icon i {left: auto; right: 10px;}
+.rtl .booking-info-sec .booking-info .field-holder.has-icon input[type="text"] {padding-right: 30px; padding-left: 0;}
+.rtl .delivery-timing ul li ul.delivery-dropdown li > a .opend-time small {right: 4px; left: auto;}
+.rtl .delivery-timing ul li a {direction: ltr;}
+.rtl .delivery-timing ul li a span {margin: 2px 0 0 4px; float: right; direction: rtl;}
+.rtl .calendar-options li:first-child {margin-right: 0;}
+.rtl .calendar-options li {margin: 0 5px 0 0; padding-left: 0; padding-right: 25px;}
+.rtl .booking-info-sec .booking-info .field-holder.has-icon textarea {padding-right: 28px; padding-left:0;}
+.rtl .booking-info-sec .field-holder.has-icon .chosen-container-single .chosen-single {padding-right: 32px; padding-left:0;}
+.rtl .menu-itam-holder .menu-itam-list .price-holder a .foodbakery-button-loader {right: auto; left:0;}
+.rtl .menu-itam-holder .menu-itam-list .price-holder a .foodbakery-button-loader .double-bounce1, 
+.rtl .menu-itam-holder .menu-itam-list .price-holder a .foodbakery-button-loader .double-bounce2 { right: -1px; left: auto;}
+.rtl .menu-itam-holder .menu-itam-list .price-holder a .foodbakery-button-loader .double-bounce2, 
+.rtl .menu-itam-holder .menu-itam-list .price-holder a .foodbakery-button-loader .double-bounce1 {left: 0; right: auto;}
+.rtl .contact-info-detail .contact-info ul li i {right: 0; left: auto;}
+.rtl .contact-info li i {margin-left: 5px; margin-right:0;}
+.rtl .contact-info-detail .contact-info ul li {padding-right: 27px; padding-left: 0;}
+.rtl .extras-detail-selected span {margin-right: 7px; margin-left:0;}
+.rtl .modal-dialog .modal-header .close {float: left;}
+.rtl .modal-dialog .modal-header h2, .rtl .modal-dialog .modal-header h3 {float: right; margin-left: 20px; margin-right:0;}
+.rtl .extras-detail-main .icon-check2 {display: inline-block;}
+.rtl .main-search .field-holder input[type="text"] {padding: 10px 34px 10px 50px;}
+.rtl .main-search .field-holder span{left:auto;right:15px;}
+.rtl .main-search .field-holder span.foodbakery-input-cross {left: 35px;right:auto;}
+.rtl .listing.simple ul li .text-holder {padding-left: 150px;padding-right:14px;}
+.rtl .listing .delivery-potions .post-time ~ span {padding-left: 0;padding-right: 4px;}
+.rtl .listing .list-option {right: auto;left:30px;}
+.rtl .listing .list-option .shortlist-btn{margin-left:6px;margin-right:0;}
+.rtl .listing-filter .filter-heading h6 i{margin-left:9px;margin-right:0;}
+.rtl .listing-filter ul li .checkbox label {padding-left: 0;padding-right:28px;}
+.rtl .listing-filter ul li .checkbox span {left:0;right:auto;}
+.rtl .listing-filter ul li .checkbox label:before, .rtl .order-sort-results ul li a i{right:0;left:auto;}
+.rtl .order-sort-results ul li a {padding-left: 0;padding-right:28px;}
+.rtl.modal-open .modal {direction: ltr;}
+.rtl .modal-dialog{direction:rtl;}
+.rtl ul.search-results {margin: 0 0 0 10px;}
+.rtl ul.search-results li {margin: 0 0 0 5px;}
+.rtl .pricetable-holder .cs-price > span em {margin-right: -10px;margin-left:0;}
+.rtl .pricetable-holder .foodbakery-subscribe-pkg-btn i, 
+.rtl .pricetable-holder .foodbakery-subscribe-pkg i{-webkit-transform: scaleX(-1);-moz-transform:  scaleX(-1);-ms-transform:  scaleX(-1);-o-transform:  scaleX(-1);transform:  scaleX(-1);}
+.rtl .faq.panel-group .panel-heading a:before {left: auto;right:-5px;}
+.rtl .image-frame.fancy .img-holder {padding-left: 0;padding-right:25px;}
+.rtl .image-frame.fancy .img-holder figure:before {left: auto;right:-25px}
+.rtl .image-frame.fancy .img-holder figure:after {left: auto;right:-10px;}
+.rtl .image-frame.fancy.align-left, 
+.rtl .section-title.align-left, 
+.rtl .cs-section-title.align-left, 
+.rtl .element-title.align-left {text-align: right;}
+.rtl .company-holder .swiper-button-next, .rtl .company-holder .swiper-button-prev {right: auto;left:3px;}
+.rtl .company-holder .swiper-button-prev i{right:auto;left:50px;-webkit-transform: scaleX(-1);-moz-transform:  scaleX(-1);-ms-transform:  scaleX(-1);-o-transform:  scaleX(-1);transform:  scaleX(-1);}
+.rtl .company-holder .swiper-button-next i{right:auto;left:14px;-webkit-transform: scaleX(-1);-moz-transform:  scaleX(-1);-ms-transform:  scaleX(-1);-o-transform:  scaleX(-1);transform:  scaleX(-1);}
+.rtl .page-not-found form i {left: auto;right:10px;}
+.rtl .page-not-found form input[type="submit"] {border-radius: 4px 0 0 4px;left:0;right:auto;}
+.rtl .page-not-found form input[type="text"] {padding: 0 30px 0 100px;}
+.rtl .widget.widget_text figure {margin-right: 0;margin-left: 8px;}
+.rtl .no-results .suggestions ul li {padding-left: 0;padding-right:20px;}
+.rtl .no-results .suggestions ul li:before{left:auto;right:0;}
+.rtl .suggestion-search .btn-default{border-radius: 3px 0 0 3px;}
+.rtl .suggestion-search input.form-control {padding: 8px 16px 8px 0;}
+.rtl .blog-medium .swiper-button-prev, .rtl .blog-medium .swiper-button-next{-webkit-transform:translateY(-50%) scaleX(-1);-moz-transform:translateY(-50%)  scaleX(-1);-ms-transform:translateY(-50%)  scaleX(-1);-o-transform:translateY(-50%)  scaleX(-1);transform:translateY(-50%)  scaleX(-1);line-height:26px;}
+.rtl .blog-medium .swiper-button-next{left:10px;right:auto;}
+.rtl .contact-info ul li .text-holder {margin: 0px 0 0 46px;}
+.rtl #growls.default{right:auto;left:10px;}
+.rtl .pagination > .active > a, .rtl .pagination > .active > span, 
+.rtl .pagination > .active > a:hover, .rtl .pagination > .active > span:hover, 
+.rtl .pagination > .active > a:focus, .rtl .pagination > .active > span:focus, 
+.rtl .pagination > li > a:hover, .rtl .pagination > li > span:hover, 
+.rtl .pagination > li > a:focus, .rtl .pagination > li > span:focus {box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.2);}
+.rtl .growl .growl-close {float: left;}
+.rtl .comments ul li .thumb-list .img-holder {float: right; margin: 0 0 0 20px;}
+.rtl .comments ul li .thumb-list .text-holder .reply-btn:before {right: 14px; left: auto; top: 0;-webkit-transform: scaleX(-1);-moz-transform:  scaleX(-1);-ms-transform:  scaleX(-1);-o-transform:  scaleX(-1);transform:  scaleX(-1);}
+.rtl .comments ul li .thumb-list .text-holder .reply-btn {float: left; padding: 0 30px 0 16px;}
+.rtl .breadcrumbs.align-left {text-align: right;}
+.rtl .breadcrumbs.align-right {text-align: left;}
+.rtl .breadcrumbs ul li:before {left: -17px; right: auto; -webkit-transform: scaleX(-1);-moz-transform:  scaleX(-1);-ms-transform:  scaleX(-1);-o-transform:  scaleX(-1);transform:  scaleX(-1);}
+.rtl .breadcrumbs ul li {margin: 0 0 0 18px;}
+.rtl .footer-widget .widget-newsletter .fieldset form .field-holder input[type="text"] {padding: 0 20px 0 0;}
+.rtl .footer-widget .widget-newsletter .fieldset form .field-holder.btn-holder {margin-right: 15px; margin-left: 0;}
+.rtl .reviews-holder .elements-title h5 {float: right;}
+
+/* Foudcourt Rtl Style Start */
+.rtl #header.court .slicknav_btn { direction: ltr; }
+.rtl #header.court .main-header { padding-right: 0; padding-left: 50px; }
+.rtl #header.court.transparent-header .main-header .main-nav { padding-right: 0; padding-left: 25px; }
+.rtl #header.court .main-nav .slicknav_nav { text-align: right; }
+.rtl #header.court .main-nav .slicknav_nav .slicknav_arrow { float: left; }
+.rtl #header.court .main-header .login-option { flex: auto; }
+.rtl #header.court.pinned .main-header { padding: 10px 25px; }
+.rtl .main-search.classic .field-holder input[type="submit"] { left: 8px; right: auto; }
+.rtl .main-search.classic .field-holder .restaurant-element-search-btn { right: 20px; left: auto; }
+.rtl .main-search.classic .field-holder input[type="text"] { padding-left: 150px; padding-right: 50px; }
+.rtl .main-search.classic .field-holder span.foodbakery-radius-location { left: 165px; }
+.rtl .location-holder.modern ul.location-list:after { right: 0; left: auto; }
+.rtl .location-holder ul.location-list li span { margin-left: 0; margin-right: 10px; }
+.rtl .location-holder ul.location-list li { text-align: right; }
+.rtl .location-holder.modern ul.location-list li a { display: inline-block; }
+.rtl .icon-boxes .img-holder { float: right; margin-right: 0; margin-left: 15px; }
+.rtl .company-holder.simple .company-logo .company-rating .reviews { margin-left: 0; margin-right: 3px; }
+.rtl .company-holder.simple .company-logo .list-option { margin-left: 0; margin-right: 5px; }
+.rtl .mailchimp-newsletter form .btn-submit { margin-left: 0; margin-right: 30px; }
+.rtl .footer-style-4 .widget-title:before { left: auto; right: 0; }
+.rtl .footer-style-4 .widget-connect ul li { padding-right: 40px; }
+.rtl .select-location .select-popup .my-location i { margin-left: 0; margin-right: 5px; }
+.rtl .select-location .select-popup .my-location a { margin-left: 0; margin-right: 8px; }
+.rtl .login-form .social-media li a, .rtl .signup-form .social-media li a { text-align: right; }
+.rtl .login-form .social-media li a i, 
+.rtl .signup-form .social-media li a i { margin-right: 0; margin-left: 15px; border-width: 0 0 0 1px; border-style: solid; }
+.rtl .login-form .checkbox-area label { padding-left: 0; padding-right: 20px; }
+.rtl .user-dashboard-menu {float: left;}
+.rtl .input-group-addon:last-child { border-style: solid; border-color: #ccc; border-width: 1px 0 1px 1px; }
+.rtl .input-group-addon:last-child { border-style: solid; border-color: #ccc; border-width: 1px 0 1px 1px; border-radius: 4px 0 0 4px; }
+.rtl .input-group .form-control:first-child { border-radius: 0 4px 4px 0; }
+.rtl .xdsoft_datetimepicker { direction: ltr; }
+.rtl .categories-holder.modern .categories-list:after { right: 0; left: auto; }
+.rtl .footer-style-4 .social-media > li > a { margin-right: 0; margin-left: 10px; }
+.rtl .chosen-container .chosen-drop { left: 9999px; }
+.rtl .chosen-container.chosen-with-drop .chosen-drop { left: 0; }
+.rtl .user-dashboard .option-sec .field-holder > input[type=text] { background-position: 10px; }
+.rtl .location-holder.modern ul.location-list { border-radius: 0 15px 0 15px; }
+/* Fooudcourt Rtl Style End */
+
+/*Foodcourt Rtl Responsive Style Start*/
+
+@media screen and (max-width: 1024px) { }
+
+@media screen and (max-width: 991px) { }
+
+@media screen and (max-width: 980px) {
+    .rtl #header.court.transparent-header .main-header .main-nav { left: 15px; right: auto; padding-left: 0; }
+    .rtl #header.court .main-header .login-option { padding-right: 0; padding-left: 60px; }
+    .rtl #header.court .main-nav .slicknav_nav { left: 0; right: auto; }
+    .rtl #header.court .main-header, 
+    .rtl #header.court.pinned .main-header { padding: 10px 15px; }
+}
+
+@media screen and (max-width: 767px) { }
+
+@media screen and (max-width: 700px) {
+    .rtl #header.court .main-header .login-option { padding-left: 0; width: 100%; }
+    .rtl #header.court .main-header .login-option a.get-start-btn { margin-right: auto; margin-left: 0; }
+    .rtl #header.court .main-header .login-option a.login-popup { margin-right: 0; }
+}
+
+@media screen and (max-width: 450px) {
+    .rtl .main-search.classic .field-holder input[type="submit"] { left: 50%; }
+    .rtl .main-search.classic .field-holder span.foodbakery-radius-location { left: 20px; right: auto; }
+    .rtl .mailchimp-newsletter form .btn-submit { margin-right: 0; }
+}
+
+@media screen and (max-width: 400px) { }
+
+@media screen and (max-width: 320px) { }
+
+/*Foodcourt Rtl Responsive Style End*/
