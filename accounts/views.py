@@ -1,16 +1,33 @@
+from email import message
 from django.shortcuts import render
 from  .forms import userForm
 from vendor.forms import vendorForm
 from .models import User, UserProfile
 from django.shortcuts import redirect
-from django.contrib import messages
+from django.contrib import messages, auth
+from .utils import detectUser
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.core.exceptions import PermissionDenied
 
 
 
-# Create your views here.
+# Restrict the vendor from accessing the customer page.
+def check_role_vendor(user):
+    if user.role == 1:
+        return True
+    else:
+        raise PermissionDenied
+# Restrict the vendor from accessing the customer page.
+def check_role_customer(user):
+    if user.role == 2:
+        return True
+    else:
+        raise PermissionDenied 
 
 def registerUser(request):
-    if request.method == 'POST':
+    if request.user.is_authenticated:
+        return redirect('dashboard')
+    elif request.method == 'POST':
         # print(request.POST)
         form = userForm(request.POST)
         if form.is_valid():
@@ -45,7 +62,9 @@ def registerUser(request):
     return render(request, 'accounts/register_user.html', context)
 
 def registerVendor(request):
-    if request.method == 'POST':
+    if request.user.is_authenticated:
+        return redirect('dashboard')
+    elif request.method == 'POST':
         form = userForm(request.POST)
         v_form = vendorForm(request.POST, request.FILES)
         if form.is_valid() and v_form.is_valid():
@@ -77,3 +96,35 @@ def registerVendor(request):
        'v_form': v_form,
     }
     return render(request, 'accounts/register_vendor.html', context)
+
+def login(request):
+    if request.user.is_authenticated:
+        return redirect('my-account')
+    elif request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        user = auth.authenticate(email=email, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('my-account')
+        else:
+            messages.error(request,'The password or email that you have entered is incorrect.')
+            return redirect('login')
+    return render(request, 'accounts/login.html')
+def logout(request):
+    auth.logout(request)
+    return redirect('login')
+@login_required(login_url='login')
+def myAccount(request):
+    redirectUrl = detectUser(request.user)
+    return redirect(redirectUrl) 
+@login_required(login_url='login')
+@user_passes_test(check_role_customer)
+def customerDashboard(request):
+    return render(request, 'accounts/custdashboard.html')
+
+@login_required(login_url='login')
+@user_passes_test(check_role_vendor)
+def vendorDashboard(request):
+    return render(request, 'accounts/vendashboard.html')
+    
