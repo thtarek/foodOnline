@@ -5,9 +5,11 @@ from vendor.forms import vendorForm
 from .models import User, UserProfile
 from django.shortcuts import redirect
 from django.contrib import messages, auth
-from .utils import detectUser
+from .utils import detectUser, send_verification_email
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.exceptions import PermissionDenied
+from django.utils.http import urlsafe_base64_decode
+from django.contrib.auth.tokens import default_token_generator
 
 
 
@@ -49,6 +51,8 @@ def registerUser(request):
             user = User.objects.create_user(first_name=first_name, last_name=last_name, phone_number=phone_number, email=email, username=username, password=password )
             user.role = User.CUSTOMER
             user.save()
+            # Send verification email
+            send_verification_email(request, user)
             messages.success(request, 'Your account has been registered successfully!')
             return redirect('register-user')
         # else:
@@ -82,6 +86,8 @@ def registerVendor(request):
             user_profile = UserProfile.objects.get(user=user)
             vendor.user_profile = user_profile
             vendor.save()
+            # Send verification email
+            send_verification_email(request, user)
             messages.success(request, 'Your account has been registered successfully!')
             return redirect('vendor-register')
         else:
@@ -96,6 +102,22 @@ def registerVendor(request):
        'v_form': v_form,
     }
     return render(request, 'accounts/register_vendor.html', context)
+
+def activate(request, uidb64, token):
+    try:
+        uid = urlsafe_base64_decode(uidb64).decode()
+        user = User._default_manager.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    if user is not None and default_token_generator.check_token(user, token):
+        user.is_active = True
+        user.save()
+        messages.success(request, 'Your account is activate!')
+        return redirect('my-account')
+    else:
+        messages.error(request, 'Invalid activation link!')
+        return redirect('my-account')
+    
 
 def login(request):
     if request.user.is_authenticated:
