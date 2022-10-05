@@ -15,16 +15,31 @@ def detectUser(user):
     elif user.role == None and user.is_superadmin:
         redirectUrl = '/admin'
         return redirectUrl
-def send_verification_email(request, user):
+
+def send_verification_email(request, user, mail_subject, email_template):
     from_email = settings.DEFAULT_FROM_EMAIL
     current_site = get_current_site(request)
     subject = 'Activate Your Account'
-    message = render_to_string('accounts/emails/email_verification.html',{
+    message = render_to_string(email_template,{
         'user': user,
         'domain': current_site.domain,
         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
         'token': default_token_generator.make_token(user),
     })
     to_email = user.email
-    mail = EmailMessage(subject, message, from_email, to=[to_email])
+    mail = EmailMessage(mail_subject, message, from_email, to=[to_email])
     mail.send()
+
+# def send_password_reset_email(request, user):
+#     from_email = settings.DEFAULT_FROM_EMAIL
+#     current_site = get_current_site(request)
+#     subject = 'Reset your password'
+#     message = render_to_string('accounts/emails/reset_password_email.html',{
+#         'user': user,
+#         'domain': current_site.domain,
+#         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+#         'token': default_token_generator.make_token(user),
+#     })
+#     to_email = user.email
+#     mail = EmailMessage(subject, message, from_email, to=[to_email])
+#     mail.send()
