@@ -17,27 +17,35 @@
                         <div class="user-holder">
                             <h2 class="text-uppercase">Build Your Food Menu</h2>
                             <hr>
+                            <button type="button" onclick="history.back()" class="btn btn-info font-weight-bold">Back</button>
                             <br>
+                            <h6 class="text-uppercase">Category : <span class="text-info">{{category}}</span></h6>
                             <!-- menu builder table start -->
-                            <a href="#" class="btn btn-success float-right font-weight-bold m-2">ADD FOOD</a>
-                            <a href="{% url 'add_category' %}" class="btn btn-info float-right font-weight-bold m-2">ADD CATEGORY</a>
+                            {% if fooditems %}
+                                
                             <table class="table table-hover table-borderless">
                                   <tbody>
-                                    {% for cat in categories %}
+                                    {% for food in fooditems %}
                                     <tr>
                                         <td class="text-left">{{forloop.counter}}</td>
+                                        <td class="text-left"><img class="rounded" src="{{food.image.url}}" width="40"></td>
                                         <td class="text-left">
-                                            <a href="{% url 'fooditems_by_category' cat.id %}"><p class="mb-0 font-weight-bold">{{cat.category_name}}</p></a>
+                                            <a href="#"><p class="mb-0 font-weight-bold">{{food}}</p></a>
                                         </td>
                                         <td>
-                                            <a href="{% url 'edit_category' cat.id %}"  class="btn btn-primary">Edit</a>
-                                            <a href="{% url 'delete_category' cat.id %}" onclick="return confirm('Are you sure you want to delete this category?');" class="btn btn-danger">Delete</a>
-                                            
+                                            <button type="button" class="btn btn-primary">Edit</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
                                     {% endfor %} 
                                   </tbody>
                               </table>
+                              {% else %}
+                                <h5 class="text-danger text-center">No food item available</h5>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-success font-weight-bold">ADD FOOD</a>
+                                </div>
+                              {% endif %}
                             
                             <!-- menu builder table end -->
                             <div class="row">

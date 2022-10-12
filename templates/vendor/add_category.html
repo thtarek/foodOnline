@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Main Section Start -->
+<div class="main-section">
+    {% include 'includes/cover.html'%}
+    <div class="page-section account-header buyer-logged-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <!-- load sidebar here -->
+                    {% include 'includes/v_sidebar.html' %}
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="user-dashboard loader-holder">
+                        <div class="user-holder">
+                            <h2 class="text-uppercase">Build Your Food Menu</h2>
+                            <hr>
+                            <br>
+                            <h6 class="">Add New Category</h6>
+                                <form action="{% url 'add_category' %}" method="POST">
+                                    {% csrf_token %}
+                                    <div class="mb-3 mt-3">
+                                        <label for="email" class="form-label">Category Name: *</label>
+                                        {{form.category_name}}
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="pwd" class="form-label">Description:</label>
+                                        {{form.description}}
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mb-4">Submit</button>
+                                </form>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    {% include 'includes/alerts.html' %}
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Section End -->
+
+    
+{% endblock content %}
+    

@@ -1,10 +1,25 @@
 {% if messages %}
 {% for message in messages %}
-    <div class="alert alert-success" role="alert">
-        {{message}}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <div class="alert alert-success m-4" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="close py-2" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
 {% endfor %}
 {% endif %}
+
+<!-- form error message -->
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger m-4" role="alert">
+                <strong>{{ error|escape }}</strong>
+                <button type="button" class="close py-2" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+    
