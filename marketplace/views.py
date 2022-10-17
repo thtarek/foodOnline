@@ -1,12 +1,16 @@
-from http.client import HTTPResponse
-from django.shortcuts import render, get_object_or_404
+
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from vendor.models import Vendor
 from menu.models import Category, FoodItem
 from django.db.models import Prefetch
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from .models import Cart
+
 
 
 # Create your views here.
+def is_ajax(request):
+    return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
 def marketplace(request):
     vendors = Vendor.objects.filter(is_approved=True, user__is_active=True)
@@ -31,5 +35,27 @@ def vendor_detail(request, vendor_slug):
     }
     return render(request, 'marketplace/vendor_detail.html', context)
 
-def add_to_cart(request, food_id=None):
-    return HttpResponse('testing')
+def add_to_cart(request, food_id):
+    if request.user.is_authenticated:
+        if is_ajax(request=request):
+            # Check if the food item exist
+            try:
+                fooditem = FoodItem.objects.get(id=food_id)
+                # Check if the user has already added that food to the cart
+                try:
+                    checkCart = Cart.objects.get(user=request.user, fooditem=fooditem)
+                    # increase the cart qty
+                    checkCart.quantity +=1
+                    checkCart.save()
+                    return JsonResponse({'status': 'Success', 'message':'Increased the cart quantity'})
+                except:
+                   checkCart = Cart.objects.create(user=request.user, fooditem=fooditem, quantity=1)
+                   return JsonResponse({'status': 'Success', 'message':'Added the food to the cart.'})
+
+            except:
+                return JsonResponse({'status': 'Failed', 'message':'This food does not exist'})
+
+        else:
+            return JsonResponse({'status': 'Failed', 'message':'Invalid request'})
+    else:
+        return JsonResponse({'status': 'Failed', 'message':'Please login to continue.'})
