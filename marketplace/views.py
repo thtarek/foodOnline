@@ -1,5 +1,6 @@
 
 from django.shortcuts import render, get_object_or_404, HttpResponse
+from marketplace.context_processors import get_cart_counter
 from vendor.models import Vendor
 from menu.models import Category, FoodItem
 from django.db.models import Prefetch
@@ -29,9 +30,14 @@ def vendor_detail(request, vendor_slug):
             queryset = FoodItem.objects.filter(is_available=True)
         )
     )
+    if request.user.is_authenticated:
+        cart_items = Cart.objects.filter(user=request.user)
+    else:
+        cart_items = None
     context={
         'vendor': vendor,
         'categories' : categories,
+        'cart_items' : cart_items,
     }
     return render(request, 'marketplace/vendor_detail.html', context)
 
@@ -47,10 +53,10 @@ def add_to_cart(request, food_id):
                     # increase the cart qty
                     checkCart.quantity +=1
                     checkCart.save()
-                    return JsonResponse({'status': 'Success', 'message':'Increased the cart quantity'})
+                    return JsonResponse({'status': 'Success', 'message':'Increased the cart quantity', 'cart_counter':get_cart_counter(request), 'qty':checkCart.quantity})
                 except:
                    checkCart = Cart.objects.create(user=request.user, fooditem=fooditem, quantity=1)
-                   return JsonResponse({'status': 'Success', 'message':'Added the food to the cart.'})
+                   return JsonResponse({'status': 'Success', 'message':'Added the food to the cart.', 'cart_counter':get_cart_counter(request), 'qty':checkCart.quantity})
 
             except:
                 return JsonResponse({'status': 'Failed', 'message':'This food does not exist'})
