@@ -31,7 +31,7 @@
                                                         <span class="price">£{{item.fooditem.price}}</span>
                                                         <a href="#" class="add_to_cart" data-id="{{item.fooditem.id}}" data-url="{% url 'add_to_cart' item.fooditem.id %}" style="margin-right:28px"><i class="icon-plus4 text-color"></i></a>
                                                         <label for="" id="qty-{{item.fooditem.id}}">0</label>
-                                                        <a href="#" class="decrease_cart" data-id="{{item.fooditem.id}}" data-url="{% url 'decrease_cart' item.fooditem.id %}"><i class="icon-minus text-color"></i></a>
+                                                        <a href="#" class="decrease_cart" data-id="{{item.fooditem.id}}" id="{{item.id}}" data-url="{% url 'decrease_cart' item.fooditem.id %}"><i class="icon-minus text-color"></i></a>
                                                         <a href="#" class="delete_cart_item" data-id="{{item.id}}" data-url="{% url 'delete_cart_item' item.id %}"><i class="icon-delete text-color"></i></a>
                                                     </div>
                                                 </li>
