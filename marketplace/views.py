@@ -6,6 +6,7 @@ from menu.models import Category, FoodItem
 from django.db.models import Prefetch
 from django.http import HttpResponse, JsonResponse
 from .models import Cart
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -93,10 +94,23 @@ def decrease_cart(request, food_id):
             return JsonResponse({'status': 'Failed', 'message':'Invalid request'})
     else:
         return JsonResponse({'status': 'login_required', 'message':'Please login to continue.'})
-
+@login_required(login_url='login')
 def cart(request):
     cart_items = Cart.objects.filter(user=request.user)
     context = {
         'cart_items':cart_items
     }
     return render(request, 'marketplace/cart.html', context)
+def delete_cart_item(request, cart_id):
+    if request.user.is_authenticated:
+        if is_ajax(request=request):
+            try:
+                # if the cart item exist
+                cart_item = Cart.objects.get(user=request.user, id=cart_id)
+                if cart_item:
+                    cart_item.delete()
+                    return JsonResponse({'status': 'Success','message':'Cart item has been deleted!', 'cart_counter':get_cart_counter(request)})
+            except:
+                return JsonResponse({'status': 'Failed', 'message':'Cart item does not exist'})
+        else:
+            return JsonResponse({'status': 'Failed', 'message':'Invalid request'})
