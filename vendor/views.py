@@ -113,3 +113,6 @@ def delete_category(request, pk=None):
      category.delete()
      messages.success(request, 'Category has been deleted successfully!')
      return redirect('menu_builder')
+
+def opening_hour(request):
+    return render(request, 'vendor/opening_hour.html')
