@@ -1,5 +1,4 @@
 from multiprocessing import context
-from sqlite3 import IntegrityError
 from unicodedata import category
 from django.shortcuts import render, get_object_or_404, redirect
 
@@ -15,6 +14,7 @@ from accounts.views import check_role_vendor
 from menu.models import Category, FoodItem
 from django.template.defaultfilters import slugify
 from django.http import HttpResponse, JsonResponse
+from django.db import IntegrityError
 # Create your views here.
 
 def get_vendor(request):
@@ -136,10 +136,17 @@ def add_opening_hours(request):
             # print(day, from_hour, to_hour, is_closed)
             try:
                 hour = OpeningHour.objects.create(vendor=get_vendor(request), day=day, from_hour=from_hour, to_hour=to_hour, is_closed=is_closed)
-                response = {'status': 'success'}
+                if hour:
+                    day = OpeningHour.objects.get(id=hour.id)
+                    if day.is_closed:
+                        response = {'status': 'success', 'id':hour.id, 'day':day.get_day_display(), 'is_closed': 'Closed'}
+                    else:
+                        response = {'status': 'success', 'id':hour.id, 'day':day.get_day_display(), 'from_hour':hour.from_hour, 'to_hour':hour.to_hour }
+
+                # response = {'status': 'success'}
                 return JsonResponse(response)
             except IntegrityError as e:
-                response = {'status': 'failed'}
+                response = {'status': 'failed', 'message':from_hour+'-'+to_hour+' already exists for this day!'}
                 return JsonResponse(response)
 
         else:
