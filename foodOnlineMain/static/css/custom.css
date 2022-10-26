@@ -1,0 +1,6 @@
+#opening_hours select{
+    padding: 5px 10px;
+}
+.button.btn.btn-success.add_hour{
+    padding: 7px 15px 7px 15px;
+}

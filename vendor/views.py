@@ -1,8 +1,10 @@
 from multiprocessing import context
+from sqlite3 import IntegrityError
 from unicodedata import category
 from django.shortcuts import render, get_object_or_404, redirect
 
 from menu.forms import CategoryForm
+import vendor
 from .forms import vendorForm, OpeningHourForm
 from accounts.forms import UserProfileForm
 from accounts.models import UserProfile
@@ -12,6 +14,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from accounts.views import check_role_vendor
 from menu.models import Category, FoodItem
 from django.template.defaultfilters import slugify
+from django.http import HttpResponse, JsonResponse
 # Create your views here.
 
 def get_vendor(request):
@@ -122,3 +125,24 @@ def opening_hour(request):
         'opening_hours': opening_hours,
     }
     return render(request, 'vendor/opening_hour.html', context)
+
+def add_opening_hours(request):
+    if request.user.is_authenticated:
+        if request.headers.get('X-requested-with') == 'XMLHttpRequest' and request.method == 'POST':
+            day = request.POST.get('day')
+            from_hour = request.POST.get('from_hour')
+            to_hour = request.POST.get('to_hour')
+            is_closed = request.POST.get('is_closed')
+            # print(day, from_hour, to_hour, is_closed)
+            try:
+                hour = OpeningHour.objects.create(vendor=get_vendor(request), day=day, from_hour=from_hour, to_hour=to_hour, is_closed=is_closed)
+                response = {'status': 'success'}
+                return JsonResponse(response)
+            except IntegrityError as e:
+                response = {'status': 'failed'}
+                return JsonResponse(response)
+
+        else:
+            HttpResponse('Ok')
+
+

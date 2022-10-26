@@ -14,5 +14,6 @@ urlpatterns = [
 
     # opening hour CRUD
     path('opening-hour/', views.opening_hour, name="opening_hour"),
+    path('opening-hour/add/', views.add_opening_hours, name='add_opening_hours'),
 
 ]
