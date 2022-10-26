@@ -19,7 +19,45 @@
                             <hr>
                             <br>
                             <!-- menu builder table start -->
+                            
                            
+                             
+                            
+
+                            <table class="table opening_hours" style="width:550px; border:none !important ;">
+                                <tbody>
+                                    {% for hour in opening_hours %}
+                                        <tr>
+                                            <td><b>{{hour}} </b></td>
+                                            <td>{% if hour.is_closed %}Closed {% else %} {{hour.from_hour}}-{{hour.to_hour}}{% endif %}</td>
+                                            <td><a href="">Remove</a></td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+
+                            <br>
+                            <br>
+
+                              <form id="opening_hours">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        {{form.day}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{form.from_hour}}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {{form.to_hour}}
+                                    </div>
+                                    <div class="col-md-">
+                                        {{form.is_closed}} Set as closed
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class="btn btn-success">Add Hours</button>
+                                    </div>
+                                </div>
+                              </form>  
                             
                             <!-- menu builder table end -->
                             <div class="row">

@@ -3,10 +3,10 @@ from unicodedata import category
 from django.shortcuts import render, get_object_or_404, redirect
 
 from menu.forms import CategoryForm
-from .forms import vendorForm
+from .forms import vendorForm, OpeningHourForm
 from accounts.forms import UserProfileForm
 from accounts.models import UserProfile
-from .models import Vendor
+from .models import OpeningHour, Vendor
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, user_passes_test
 from accounts.views import check_role_vendor
@@ -115,4 +115,10 @@ def delete_category(request, pk=None):
      return redirect('menu_builder')
 
 def opening_hour(request):
-    return render(request, 'vendor/opening_hour.html')
+    opening_hours = OpeningHour.objects.filter(vendor=get_vendor(request))
+    form = OpeningHourForm()
+    context = {
+       'form': form,
+        'opening_hours': opening_hours,
+    }
+    return render(request, 'vendor/opening_hour.html', context)
