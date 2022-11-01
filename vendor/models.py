@@ -40,13 +40,13 @@ class Vendor(models.Model):
         return super(Vendor, self).save(*args, **kwargs)
 
 DAYS = [
-    (1, ('Saturday')),
-    (2, ('Sunday')),
-    (3, ('Monday')),
-    (4, ('Tuesday')),
-    (5, ('Wednesday')),
-    (6, ('Thursday')),
-    (7, ('Friday')),
+    (1, ('Monday')),
+    (2, ('Tuesday')),
+    (3, ('Wednesday')),
+    (4, ('Thursday')),
+    (5, ('Friday')),
+    (6, ('Saturday')),
+    (7, ('Sunday')),
 ]
 HOUR_OF_DAY_24 = [(time(h, m).strftime('%I:%M %p'), time(h, m).strftime('%I:%M %p')) for h in range(0, 24) for m in (0, 30)]
 class OpeningHour(models.Model):
