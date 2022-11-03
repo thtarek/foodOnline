@@ -71,26 +71,37 @@
                                             <li style="list-style:none;">
                                                 Subtotal
                                                 <span class="price float-right">
-                                                    <spn class="currency">$</spn>
+                                                    <spn class="currency">৳</spn>
                                                     <span id="subtotal">{{subtotal}}</span>
                                                 </span>
                                             </li>
                                             
-                                            {% for key, value in tax_dict.items %} 
+                                            <!-- {% for key, value in tax_dict.items %} 
                                                 {% for i, j in value.items %}   
                                                 <li style="list-style:none;">
                                                     {{key}}<small>({{i}}%)</small>
                                                     <span class="price float-right">
-                                                        <spn class="currency">$</spn>
-                                                        <span id="tax-{{key}}">{{j}}</span>
+                                                        <spn class="currency">৳</spn>
+                                                        <span id="tax-{{ key }}">{{ j }}</span>
                                                     </span>
                                                 </li>
+                                                {% endfor %}
+                                            {% endfor %} -->
+                                            {% for key, value in tax_dict.items %}
+                                                {% for i, j in value.items %}
+                                                    <li style="list-style-type: none;">
+                                                        {{ key }} <small>({{ i }}%)</small>
+                                                        <span class="price float-right">
+                                                            <span class="currency">$</span>
+                                                            <span id="tax-{{ key }}">{{ j }}</span>
+                                                        </span>
+                                                    </li>
                                                 {% endfor %}
                                             {% endfor %}
                                             <li style="list-style:none; font-weight: 600;">
                                                 Total
                                                 <span class="price float-right">
-                                                    <spn class="currency">$</spn>
+                                                    <spn class="currency">৳</spn>
                                                     <span id="total">{{grand_total}}</span>
                                                 </span>
                                             </li>
