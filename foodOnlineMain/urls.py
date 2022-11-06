@@ -25,7 +25,8 @@ from marketplace import views as marketplaceViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('accounts/', include('accounts.urls')),
+    # path('accounts/', include('accounts.urls')),
+    path('', include('accounts.urls')),
     path('marketplace/', include('marketplace.urls')),
     #CART
     path('cart/', marketplaceViews.cart, name='cart')
