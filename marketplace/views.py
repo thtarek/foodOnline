@@ -124,3 +124,6 @@ def delete_cart_item(request, cart_id):
                 return JsonResponse({'status': 'Failed', 'message':'Cart item does not exist'})
         else:
             return JsonResponse({'status': 'Failed', 'message':'Invalid request'})
+
+def checkout(request):
+    return render(request, 'marketplace/checkout.html')
