@@ -145,8 +145,9 @@
                                                     margin: 10px;">
                                                 </label>
                                             </div>
+                                            <span class="text-danger" id="payment-method-error"></span>
                                             <!-- Select Payment Method End -->
-                                            <button type="submit" href="{% url 'checkout' %}" class="btn btn-danger w-100 p-2 mt-3">PLACE ORDER</button>
+                                            <button type="submit" onclick="return PayMethodConfirm()" href="{% url 'checkout' %}" class="btn btn-danger w-100 p-2 mt-3">PLACE ORDER</button>
                                         </ul>
                                         <!-- end form -->    
                                     </form>
@@ -164,5 +165,25 @@
     </div>
 </div>
 <!-- Main Section End -->
+
+<script>
+    function PayMethodConfirm(){
+        var payment_method = $("input[name='payment_method']:checked").val()
+        if (!payment_method) {
+            $('#payment-method-error').html("Select Payment Method!");
+            return false; 
+        }else{
+            var conf = confirm('You have selected '+payment_method+' as your preferred payment method.\nClick "OK" to continue.')
+            if(conf == true){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+    $('input[name=payment_method]').on('change', function(){
+        $('#payment-method-error').html("");
+    })
+</script>
 {% endblock content %}
     
