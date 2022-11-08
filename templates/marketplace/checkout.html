@@ -1,1 +1,132 @@
-Maeket pale
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Main Section Start -->
+<div class="main-section pt-5">
+    <div class="page-section">
+        <div class="container">
+            <div class="row">
+                <!-- Cart Section Start -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="tabs-holder horizontal">
+                        <ul class="stickynav-tabs nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home"><i class="icon-add_shopping_cart text-danger" style="font-size: 20px;"></i>Billing Address</a></li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane in active">
+                                <div class="menu-itam-holder">
+                                    <div id="menu-item-list-6272" class="menu-itam-list">
+                                        <form action="" method="POST">
+                                            {% csrf_token %}
+                                            <div class="row">
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>First Name</label>
+                                                    {{form.first_name}}
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>Last Name</label>
+                                                    {{form.last_name}}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>Phone Number</label>
+                                                    {{form.phone}}
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>Email</label>
+                                                    {{form.email}}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-12 col-sm-12 col-lg-6">
+                                                    <label>Address</label>
+                                                    {{form.address}}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>Country</label>
+                                                    {{form.country}}
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>State</label>
+                                                    {{form.state}}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>City</label>
+                                                    {{form.city}}
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-lg-6">
+                                                    <label>Pin Code</label>
+                                                    {{form.pin_code}}
+                                                </div>
+                                            </div>
+                                    </div>     
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Cart Section End -->
+                <!-- Order Section Start -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="tabs-holder horizontal">
+                        <ul class="stickynav-tabs nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home"><i class="icon- icon-room_service"></i>Your Order</a></li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane in active">
+                                <div class="menu-itam-holder">
+                                    <div>
+                                        <ul>
+                                            <li style="list-style:none;">
+                                                Subtotal
+                                                <span class="price float-right">
+                                                    <spn class="currency">৳</spn>
+                                                    <span id="subtotal">{{subtotal}}</span>
+                                                </span>
+                                            </li>
+                                            {% for key, value in tax_dict.items %}
+                                                {% for i, j in value.items %}
+                                                    <li style="list-style-type: none;">
+                                                        {{ key }} <small>({{ i }}%)</small>
+                                                        <span class="price float-right">
+                                                            <span class="currency">$</span>
+                                                            <span id="tax-{{ key }}">{{ j }}</span>
+                                                        </span>
+                                                    </li>
+                                                {% endfor %}
+                                            {% endfor %}
+                                            <li style="list-style:none; font-weight: 600;">
+                                                Total
+                                                <span class="price float-right">
+                                                    <spn class="currency">৳</spn>
+                                                    <span id="total">{{grand_total}}</span>
+                                                </span>
+                                            </li>
+                                            <button type="submit" href="{% url 'checkout' %}" class="btn btn-danger w-100 p-2 mt-3">PLACE ORDER</button>
+                                        </ul>
+                                        <!-- end form -->    
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Order Section End -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Section End -->
+{% endblock content %}
+    

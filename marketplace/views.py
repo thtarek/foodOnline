@@ -2,6 +2,7 @@
 from datetime import date, datetime
 from django.shortcuts import render, get_object_or_404, HttpResponse
 from marketplace.context_processors import get_cart_counter, get_cart_amount
+from orders.forms import orderForm
 from vendor.models import OpeningHour, Vendor
 from menu.models import Category, FoodItem
 from django.db.models import Prefetch
@@ -126,4 +127,8 @@ def delete_cart_item(request, cart_id):
             return JsonResponse({'status': 'Failed', 'message':'Invalid request'})
 
 def checkout(request):
-    return render(request, 'marketplace/checkout.html')
+    form = orderForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'marketplace/checkout.html', context)
