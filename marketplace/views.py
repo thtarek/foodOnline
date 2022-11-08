@@ -9,6 +9,8 @@ from django.db.models import Prefetch
 from django.http import HttpResponse, JsonResponse
 from .models import Cart
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
+
 
 
 
@@ -127,8 +129,13 @@ def delete_cart_item(request, cart_id):
             return JsonResponse({'status': 'Failed', 'message':'Invalid request'})
 
 def checkout(request):
+    cart_items = Cart.objects.filter(user=request.user).order_by('created_at')
+    cart_count = cart_items.count()
+    if cart_count <= 0:
+        return redirect('marketplace')
     form = orderForm()
     context = {
-        'form': form
+        'form': form,
+        'cart_items' : cart_items,
     }
     return render(request, 'marketplace/checkout.html', context)
