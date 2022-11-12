@@ -74,6 +74,7 @@ TEMPLATES = [
                 'marketplace.context_processors.get_cart_counter',
                 'marketplace.context_processors.get_cart_amount',
                 'accounts.context_processors.get_user_profile',
+                'accounts.context_processors.get_PayPal_Client_Id',
             ],
         },
     },
@@ -159,3 +160,4 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 GOOGLE_API_KEY='AIzaSyDkXEIl-3Uq3BKBJcXeWx9gEUn95fADW2g'
 # GOOGLE_API_KEY='AIzaSyC4yTudrg9pTcB2khAgrbcMBfVvbviOhVU'
 PAYPAL_CLIENT_ID = config('PAYPAL_CLIENT_ID')
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
