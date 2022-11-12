@@ -16,8 +16,32 @@
                         <div class="tab-content">
                             <div id="home" class="tab-pane in active">
                                 <div class="menu-itam-holder">
+                                    <table class="table">
+                                        <tbody>
+                                            {% for item in cart_items %}
+                                            <tr>
+                                                <td><img src="{{ item.fooditem.image.url }}" width="40" alt="Food Image"></td>
+                                                <td><b>{{ item.fooditem }}</b></td>
+                                                <td>{{ item.quantity }}</td>
+                                                <td>${{ item.fooditem.price }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
                                     <div id="menu-item-list-6272" class="menu-itam-list">
-                                         
+                                         <div class="billing-address">
+                                                <div><b>{{order.name}}</b></div>
+                                                <div>{{order.address}}</div>
+                                                <div>{{order.city}} - {{order.pin_code}}</div>
+                                                <div>{{order.state}}, {{order.country}}</div>
+                                                <div><b>Phone: </b>{{ order.phone }}</div>
+                                                <div><b>Email: </b>{{ order.email }}</div>
+                                                <div><b>Payment: </b>{{ order.payment_method }}</div>
+                                                <br>
+                                                <div><a href="{% url 'checkout' %}" class="btn btn-outline-danger">Edit</a></div>
+                                                <br>
+                                            
+                                         </div>
                                     </div>     
                                 </div>
                             </div>
@@ -84,7 +108,26 @@
 
 <!-- PayPal JavaScript Code -->
 <script>
+    function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
     var grand_total = "{{grand_total}}"
+    var url = "{% url 'payments' %}"
+    var order_number = "{{ order.order_number }}"
+    const csrftoken = getCookie('csrftoken');
     console.log(grand_total)
     // Render the PayPal button into #paypal-button-container
     paypal.Buttons({
@@ -108,7 +151,11 @@
                 console.log(orderData)
                 var transaction = orderData.purchase_units[0].payments.captures[0];
                 // alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-                console.log(transaction.id)
+                var transaction_id =  transaction.id
+                var status = orderData.status
+                var payment_method = 'PayPal'
+
+                sendTransaction(transaction_id, payment_method, status);
 
                 // Replace the above to show a success message within this page, e.g.
                 // const element = document.getElementById('paypal-button-container');
@@ -120,6 +167,24 @@
 
 
     }).render('#paypal-button-container');
+
+    // send the data to payments view  to store in the database
+    function sendTransaction(transaction_id, payment_method, status){
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {
+                'order_number': order_number,
+                'transaction_id': transaction_id,
+                'payment_method': payment_method,
+                'status': status,
+                'csrfmiddlewaretoken': csrftoken,
+            },
+            success: function(response){
+                console.log('response==>', response)
+            }
+        })
+    }
 </script>
 <!-- PayPal JavaScript Code End -->
 {% endblock content %}

@@ -6,6 +6,8 @@ from marketplace.models import Cart
 from orders.forms import orderForm
 from orders.models import Order
 from .utils import generate_order_number
+from django.http import HttpResponse
+
 
 # Create your views here.
 
@@ -40,7 +42,14 @@ def place_order(request):
             order.save()
             order.order_number = generate_order_number(order.id)
             order.save()
-            return redirect('place_order')
+            context = {
+                'order': order,
+                'cart_items': cart_items,
+            }
+            return render(request, 'orders/place_order.html', context)
         else:
             print(form.errors)
     return render(request, 'orders/place_order.html')
+
+def payments(request):
+    return HttpResponse('Payments View....')
