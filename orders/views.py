@@ -7,10 +7,12 @@ from orders.forms import orderForm
 from orders.models import Order, OrderedFood, Payment
 from .utils import generate_order_number
 from django.http import HttpResponse
+from accounts.utils import send_notification
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
-
+@login_required(login_url="login")
 def place_order(request):
     cart_items = Cart.objects.filter(user=request.user).order_by('created_at')
     cart_count = cart_items.count()
@@ -51,6 +53,7 @@ def place_order(request):
             print(form.errors)
     return render(request, 'orders/place_order.html')
 
+@login_required(login_url="login")
 def payments(request):
     # Check if the request is ajax or not
     if request.headers.get('x-requested-with') == 'XMLHttpRequest' and request.method == 'POST':
@@ -86,8 +89,19 @@ def payments(request):
             ordered_food.quantity = item.quantity
             ordered_food.price = item.fooditem.price 
             ordered_food.amount = item.fooditem.price * item.quantity # total amount
-            ordered_food.save()
-        return HttpResponse('Save order food')
+            ordered_food.save() 
+        
+        # send order confirmation email to the customer
+        order_number = order.order_number
+        mail_subject = "Order received – Order Number " + str(order_number)
+        email_template = "orders/order_confirmation_email.html"
+        context = {
+            'user' : request.user,
+            'order': order,
+            'to_email': order.email,
+        }
+        send_notification(mail_subject, email_template, context)
+        return HttpResponse('Data Saved and send email')
 
         
     return HttpResponse('Payments View....')
