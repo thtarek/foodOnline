@@ -1,12 +1,11 @@
 import simplejson as json
 from django.shortcuts import render, redirect
-
 from marketplace.context_processors import get_cart_amount
 from marketplace.models import Cart
 from orders.forms import orderForm
 from orders.models import Order, OrderedFood, Payment
 from .utils import generate_order_number
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from accounts.utils import send_notification
 from django.contrib.auth.decorators import login_required
 
@@ -117,9 +116,32 @@ def payments(request):
                 send_notification(mail_subject, email_template, context)
         # print('to_emails=>', to_emails)
         # CLEAR THE CART IF THE PAYMENT IS SUCCESS
-        cart_items.delete() 
+        # cart_items.delete() 
 
-        return HttpResponse('Data Saved and send email, vendor')
+        # RETURN BACK TO AJAX WITH THE STATUS SUCCESS OR FAILURE
+        response = {
+            'order_number': order_number,
+            'transaction_id': transaction_id,
+        }
+        return JsonResponse(response)
 
         
     return HttpResponse('Payments View....')
+
+
+def order_complete(request):
+    order_number = request.GET.get('order_no')
+    transaction_id = request.GET.get('trans_id')
+
+    try:
+        order = Order.objects.get(order_number=order_number, payment__transaction_id=transaction_id, is_ordered=True)
+        ordered_food = OrderedFood.objects.filter(order=order)
+
+        context = {
+            'order': order,
+            'ordered_food': ordered_food
+        }
+        return render(request, 'orders/order_complete.html', context)
+    except:
+        return redirect('index')
+    
