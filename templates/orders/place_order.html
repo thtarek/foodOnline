@@ -159,8 +159,9 @@
                 sendTransaction(transaction_id, payment_method, status);
 
                 // Replace the above to show a success message within this page, e.g.
-                // const element = document.getElementById('paypal-button-container');
-                // element.innerHTML = '';
+                const element = document.getElementById('paypal-button-container');
+                element.innerHTML = '';
+                element.innerHTML = '<h4 class="text-center">Please wait...</h4>';
                 // element.innerHTML = '<h3>Thank you for your payment!</h3>';
                 // Or go to another URL:  actions.redirect('thank_you.html');
             });
@@ -183,7 +184,8 @@
             },
             success: function(response){
                 console.log('response==>', response)
-                window.location.href = order_complete + '?order_no='+response.order_number+'&trans_id='+transaction_id
+                // window.location.href = order_complete + '?order_no='+response.order_number+'&trans_id='+transaction_id
+                window.location.href = order_complete +'?order_no='+response.order_number+'&trans_id='+response.transaction_id
             }
         })
     }
