@@ -67,12 +67,12 @@
                                                     
                                                 {% for order in recent_orders %}
                                                   <tr>
-                                                    <th scope="row">{{ order.order_number }}</th>
+                                                    <td><b><a href="{% url 'order_detail' order.order_number %}" class="text-dark">{{ order.order_number }}</a></b></td>
                                                     <td>{{ order.name }}</td>
                                                     <td>${{ order.total }}</td>
                                                     <td>{{ order.status }}</td>
                                                     <td>{{ order.created_at }}</td>
-                                                    <td><a href="" class="btn btn-info">Details</a></td>
+                                                    <td><a href="{% url 'order_detail' order.order_number %}" class="btn btn-info">Details</a></td>
                                                   </tr>    
                                                 {% endfor %}     
                                                 </tbody>
