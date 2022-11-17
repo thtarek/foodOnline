@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'marketplace',
     'customers',
     'orders',
+    'fontawesomefree',
 ]
 
 MIDDLEWARE = [
